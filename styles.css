@@ -1,0 +1,242 @@
+
+*{ /*  seletor "*"  é universal para todos os elementos  fazer isto para resetar folha de estilo*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(255, 255, 255);
+  font-family: Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;         /* Negrito */
+  font-size: 19px;          /* Tamanho pequeno */
+  line-height: 25px;         /* Altura da linha (ajustável) */
+  color: #2c3c2c;         /* Cor escura elegante */
+}
+
+html {
+  scroll-behavior: smooth; /*rolagem suave ao clicar no menu*/
+}
+
+
+header{
+  font-style: normal;
+  font-weight: 700;         /* Negrito */
+  font-size: 14px;          /* Tamanho pequeno */
+  color: #2c3c2c;         /* Cor escura elegante */
+  background-color:  #93b874;
+  }
+
+ header .container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px 20px; /* Topo/baixo: 5px, Esquerda/direita: 30px */
+  display: flex;              /* Layout flexível */
+  justify-content:space-between;
+  align-items:center;
+ }
+
+.logo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;         /* Deixa a logo redonda */
+  object-fit: cover;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  padding: 10px 10px;         /* Adiciona espaço à esquerda e à direita */
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 16px;            /* Tamanho mais legível e elegante */
+}
+
+/*adicionado para poder fazer link do menu com a area do codigo*/
+nav ul li a {
+  text-decoration: none;  /* remove sublinhado */
+  color: inherit;         /* herda a cor do pai (normalmente a cor do <li> ou <nav>) */
+  font-weight: inherit;   /* mantém o estilo de fonte original */
+}
+
+ul{
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+li{
+  list-style: none;
+  padding: 6px 10px;
+}
+
+/* Container centralizado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 2em;
+  /* color: white; */
+}
+
+/*classe generica aplicado a todos e depois classe especifica aplicada a cads secao*/
+.secao{
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  width: 100%;
+  padding: 20px 0; /* espaço vertical opcional */
+}
+
+/*height: 50vh; caso eu tenha algo fixo*/
+.hero{background-color:   rgb(230, 238, 224);}
+.cursos{background-color: rgb(255, 255, 255)}                 
+.videos{background-color: rgb(230, 238, 224);}
+.perfil{background-color: rgb(230, 238, 224); height: 30vh;}
+.testemunhos{background-color: #85a669; height: 20vh;}
+
+
+.hero .container{ color:rgb(68, 79, 69);}
+.cursos .container{ color:rgb(34,34,34);}
+.videos .container{ color:rgb(68, 79, 69);;}
+.perfil .container{ color:rgb(68, 79, 69);}
+.testemunhos .container{ color:rgb(68, 79, 69);}
+
+/* ========================apresentacao site======*/
+
+
+.secao.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0rem 2rem;
+}
+
+.secao.hero .texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.secao.hero .texto h1 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.secao.hero .texto p {
+    font-size: 0.85rem;    /* fonte um pouco menor */
+  font-weight: 300;        /* peso mais leve, sem negrito */
+  color: #666;           /* cor um pouco mais suave */
+  line-height: 1.4;        /* entrelinhas ajustadas */
+  margin-bottom: 1.2rem;   /* espaço entre parágrafos */
+}
+
+.secao.hero .foto {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.secao.hero .foto img {
+  max-width: 65%;
+  height: auto;
+  border-radius: 8px;
+}
+/*==================== END apresentacao site====*/
+/*===========================  lista de cursos==========================*/
+
+.secao.cursos .container .texto h1{
+  font-size: 1.3rem;
+  color: #555;
+  margin: 0;       /* Remove margens */
+  padding: 0;      /* Remove paddings */
+}
+
+.lista-cursos {
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar linha */
+  gap: 20px; /* espaçamento entre cursos */
+  justify-content: left;
+  margin-top: 30px;
+}
+
+.curso {
+  background-color: #d0e5b1;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 200px; /* crescer, encolher, base = 250px */
+  max-width: 210px;
+  min-height: 330px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+/*  ========================= END Lista cursos====================*/
+
+/*===========================  lista de VIDEOS ===================*/
+
+.lista-videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-top: 30px;
+
+}
+
+.video {
+  flex: 1 1 300px;
+  max-width: 400px;
+  border-radius: 8px;
+  aspect-ratio: 16 / 9;
+  background-color: #ddd;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/*===========================  END VIDEOS ===================*/
+
+
+
+
+
+
+
+footer{
+  background-color: #93b874;
+  min-height: 100px;
+}
+
+footer iframe {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+
+
+/* ao passar mouse por cima */
+li:hover{ /*funcao para quando passa o mouse em cima*/
+  background-color: #85a669;
+  border-radius: 8px; /*para suavizar a borda ao passar o mouse*/
+  color:#ffffff
+}
+
+@media (max-width: 768px) {
+  .curso {
+    max-width: 100%;
+  }
+}
